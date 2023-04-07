@@ -12,7 +12,42 @@
   },
   "tauri": {
     "allowlist": {
-      "all": false
+      "all": false,
+      "app": {
+        "all": true
+      },
+      "clipboard": {
+        "all": true,
+        "readText": true,
+        "writeText": true
+      },
+      "dialog": {
+        "all": false,
+        "ask": false,
+        "confirm": false,
+        "message": true,
+        "open": false,
+        "save": false
+      },
+      "fs": {
+        "all": true,
+        "readFile": true,
+        "writeFile": true,
+        "readDir": true,
+        "copyFile": true,
+        "createDir": true,
+        "removeDir": true,
+        "removeFile": true,
+        "renameFile": true,
+        "exists": true
+      },
+      "notification": {
+        "all": false
+      },
+      "window": {
+        "create": false,
+        "startDragging": true
+      }
     },
     "bundle": {
       "active": true,
@@ -55,10 +90,11 @@
     },
     "windows": [
       {
+        "center": true,
         "fullscreen": false,
-        "height": 600,
         "resizable": true,
-        "title": "tauri-startert-next",
+        "title": "tauri-starter-next",
+        "height": 600,
         "width": 800,
         "fileDropEnabled": false
       }

@@ -1,6 +1,6 @@
 const Nav = () => {
   return (
-    <nav className='min-h-screen bg-gray-800 py-9 border-r border-gray-700'>
+    <nav className='min-h-full bg-gray-800 pt-9 border-r border-gray-700'>
       <div className='grid justify-center items-center mb-14'>
         <img className='w-10' src='./assets/logos/tauri.png' alt='' />
       </div>

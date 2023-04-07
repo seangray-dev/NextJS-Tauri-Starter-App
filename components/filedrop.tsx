@@ -34,24 +34,26 @@ const FileDrop: React.FC<FileDropProps> = ({ onFileDropped }) => {
     <div
       {...getRootProps()}
       className={classNames(
-        'border border-dashed p-6 text-center rounded',
+        'grid grid-cols-1 items-center mt-16 border border-dashed p-6 text-center rounded',
         isDragActive
-          ? 'mt-16 bg-gray-300 border-gray-400'
-          : 'mt-16 cursor-pointer bg-gray-800 border-gray-500 grid items-center justify-center'
+          ? 'bg-gray-300 border-gray-400'
+          : 'cursor-pointer bg-gray-800 border-gray-500'
       )}>
       <input {...getInputProps()} />
-      {isDragActive ? (
-        <p>Drop the file here...</p>
-      ) : (
-        <p className='text-white'>
-          Drag and drop a file here, or click to select a file
-        </p>
-      )}
-      {filePath && (
-        <div className='mt-3'>
-          <p className='text-gray-400'>File path:{filePath}</p>
-        </div>
-      )}
+      <div>
+        {isDragActive ? (
+          <p>Drop the file here...</p>
+        ) : (
+          <p className='text-white'>
+            Drag and drop a file here, or click to select a file
+          </p>
+        )}
+        {filePath && (
+          <div className='mt-3'>
+            <p className='text-gray-400'>File path: {filePath}</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

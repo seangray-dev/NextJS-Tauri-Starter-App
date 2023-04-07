@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Head from 'next/head';
 import Header from '@/components/header';
 import Nav from '@/components/nav';
@@ -5,7 +6,6 @@ import FileDrop from '@/components/filedrop';
 import Quick_Action from '@/components/quick_action';
 
 const handleFileDropped = (file: File) => {
-  // Perform some action with the file
   console.log('File dropped:', file);
 };
 
