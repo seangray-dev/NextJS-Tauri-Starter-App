@@ -1,11 +1,8 @@
 import NextAuth from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
+import DropboxProvider from 'next-auth/providers/dropbox';
 
-if (
-  !process.env.GOOGLE_ID ||
-  !process.env.GOOGLE_SECRET ||
-  !process.env.JWT_SECRET
-) {
+if (!process.env.DROPBOX_CLIENT_ID || !process.env.DROPBOX_CLIENT_SECRET) {
   throw new Error(
     'Missing required environment variables: GOOGLE_ID, GOOGLE_SECRET, and/or JWT_SECRET'
   );
@@ -16,6 +13,10 @@ export default NextAuth({
     GoogleProvider({
       clientId: process.env.GOOGLE_ID as string,
       clientSecret: process.env.GOOGLE_SECRET as string,
+    }),
+    DropboxProvider({
+      clientId: process.env.DROPBOX_CLIENT_ID as string,
+      clientSecret: process.env.DROPBOX_CLIENT_SECRET as string,
     }),
   ],
   jwt: {

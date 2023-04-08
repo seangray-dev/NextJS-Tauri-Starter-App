@@ -9,9 +9,9 @@ const jakarta = Plus_Jakarta_Sans({
   weight: ['500', '700'],
 });
 
-export default function App({ Component, pageProps, session }: AppProps) {
+export default function App({ Component, pageProps }: AppProps) {
   return (
-    <SessionProvider session={session}>
+    <SessionProvider session={pageProps.session}>
       <main className={`${jakarta.variable} font-jakarta`}>
         <Component {...pageProps} />
       </main>
