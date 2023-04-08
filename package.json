@@ -11,7 +11,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "^13.2.4",
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@next/font": "^13.3.0",
     "@tauri-apps/api": "^1.2.0",
     "@types/node": "18.15.11",
     "@types/react": "18.0.33",

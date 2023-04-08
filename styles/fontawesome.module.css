@@ -1,0 +1,10 @@
+.gray_400 {
+  color: rgb(156 163 175);
+  transition: color 0.3s ease;
+}
+
+.hover-spin:hover {
+  color: white;
+  transition: transform 0.5s;
+  transform: rotate(360deg);
+}

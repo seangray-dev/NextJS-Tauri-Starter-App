@@ -2,12 +2,6 @@ import NextAuth from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
 import DropboxProvider from 'next-auth/providers/dropbox';
 
-if (!process.env.DROPBOX_CLIENT_ID || !process.env.DROPBOX_CLIENT_SECRET) {
-  throw new Error(
-    'Missing required environment variables: GOOGLE_ID, GOOGLE_SECRET, and/or JWT_SECRET'
-  );
-}
-
 export default NextAuth({
   providers: [
     GoogleProvider({

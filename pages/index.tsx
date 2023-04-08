@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Header from '@/components/header';
 import Nav from '@/components/nav';
@@ -6,6 +6,7 @@ import FileDrop from '@/components/filedrop';
 import Quick_Action from '@/components/quick_action';
 import { useSession } from 'next-auth/react';
 import Login from '@/pages/login';
+import Settings from '@/pages/settings';
 
 const handleFileDropped = (file: File) => {
   console.log('File dropped:', file);
@@ -35,6 +36,7 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
+
       <div className='grid grid-cols-[200px_minmax(500px,_1fr)]'>
         <div>
           <Nav></Nav>
